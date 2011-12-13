@@ -7,6 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Labs</title>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="stylesheets/foundation.css">
   <link rel="stylesheet" href="stylesheets/app.css">
   <link rel="stylesheet" href="stylesheets/flickrbomb.css">
@@ -26,51 +27,43 @@
         <h4 class="subheader">Logo, print and web design. Browse &amp; enjoy.</h4>
       </div>
     </div>
-    <!-- <div class="row">
+    <div class="row">
       <div class="twelve columns">
         <div id="featured">
-          <div style="text-align:center;background:url(images/logo256.png) #e9e9e9 no-repeat center"></div>
-          <img src="http://placehold.it/980x200/E9E9E9/DF3030&text=Lab1" data-caption="#caption1" alt="" />
-          <img src="http://placehold.it/980x200/E9E9E9/DF3030&text=Lab2" alt="" />
+          <div style="text-align:center;background:url(images/logo128.png) #e9e9e9 no-repeat center"></div>
+          <img src="http://placehold.it/980x150/E9E9E9/DF3030&text=Here we make experiments..." data-caption="#caption1" alt="" />
+          <img src="http://placehold.it/980x150/E9E9E9/DF3030&text=...and then we bring them alive." alt="" />
         </div>
         <div class="orbit-caption" id="caption1" style="display:none;"><strong>I'm A Badass Caption:</strong> I can haz <a href="#">links</a>, <em>style</em> or anything that is valid markup :)</div>
       </div>
-    </div> -->
-    <!-- <div class="row">
-      <div class="twelve columns" style="text-align:center;background:#e9e9e9">
-        <img src="flickr://landscape" style="width:940px;height:175px">
-        <img src="http://placehold.it/940x250/E9E9E9/DF3030&text=Paganis's Labs" />
-        <img src="images/logo128.png" />
-      </div>
-      <hr />
-    </div> -->
+    </div>
     <div class="row">
       <div class="nine columns">
         <section id="container">
           <ul id="stage">
-            <li data-tags="print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="logo design,print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="web design,logo design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="web design,print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="logo design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="web design,logo design,print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="logo design,print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="web design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="web design,logo design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="web design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="logo design,print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="logo design,print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="web design,logo design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="logo design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="web design,logo design,print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="web design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="web design,print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="logo design,print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="web design,logo design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
-            <li data-tags="logo design,print design"><img src="http://placehold.it/229x100/E9E9E9/DF3030&text=Lab" /></li>
+            <li data-tags="print design">Lab Name</li>
+            <li data-tags="logo design,print design">Lab Name</li>
+            <li data-tags="web design,logo design"><a href="#">Lab Name</a></li>
+            <li data-tags="web design,print design"><a href="#">Lab Name</a></li>
+            <li data-tags="logo design">Lab Name</li>
+            <li data-tags="web design,logo design,print design"><a href="#">Lab Name</a></li>
+            <li data-tags="logo design,print design">Lab Name</li>
+            <li data-tags="web design"><a href="#">Lab Name</a></li>
+            <li data-tags="web design,logo design"><a href="#">Lab Name</a></li>
+            <li data-tags="web design"><a href="#">Lab Name</a></li>
+            <li data-tags="logo design,print design">Lab Name</li>
+            <li data-tags="logo design,print design">Lab Name</li>
+            <li data-tags="print design">Lab Name</li>
+            <li data-tags="web design,logo design"><a href="#">Lab Name</a></li>
+            <li data-tags="print design">Lab Name</li>
+            <li data-tags="logo design">Lab Name</li>
+            <li data-tags="web design,logo design,print design"><a href="#">Lab Name</a></li>
+            <li data-tags="web design"><a href="#">Lab Name</a></li>
+            <li data-tags="web design,print design"><a href="#">Lab Name</a></li>
+            <li data-tags="logo design,print design">Lab Name</li>
+            <li data-tags="web design,logo design"><a href="#">Lab Name</a></li>
+            <li data-tags="print design">Lab Name</li>
+            <li data-tags="logo design,print design">Lab Name</li>
             <?php /***
             <?php $dir='labs'; $files=array_diff(scandir($dir, 0),array(".","..",".DS_Store")); foreach($files as $file){ ?>
             <?php if (substr($file,0,1) == '_') $tag="resources"; elseif (substr($file,0,1) == '#') $tag="skata"; else $tag="labs"; ?>
@@ -88,26 +81,14 @@
       <div class="three columns">
         <nav id="filter"></nav>
         <dl class="nice tabs vertical hide-on-phones">
-					<dd><a href="#" class="active">Getting Started</a></dd>
-					<dd><a href="#">Grid</a></dd>
-					<dd><a href="#">Buttons</a></dd>
-					<dd><a href="#">Forms</a></dd>
-				</dl>
-        <!-- <div class="alert-box error">
-          This is a success alert.
-          <a href="" class="close">&times;</a>
-        </div>
-        <div class="alert-box success">
-          This is a success alert.
-          <a href="" class="close">&times;</a>
-        </div>
-        <div class="alert-box warning">
-          This is a success alert.
-          <a href="" class="close">&times;</a>
-        </div> -->
+          <dd><a href="#" class="active">Home</a></dd>
+          <dd><a href="#">Menu#1</a></dd>
+          <dd><a href="#">Menu#2</a></dd>
+          <dd><a href="#">Menu#3</a></dd>
+        </dl>
       </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="twelve columns">
         <dl class="nice contained tabs">
           <dd><a href="#nice1" class="active">Nice Tab 1</a></dd>
@@ -120,12 +101,12 @@
           <li id="nice3Tab">This is nice tab 3's content. It's, you know...okay.</li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </div>
   <script src="javascripts/foundation.js"></script>
   <script src="javascripts/app.js"></script>
   <script src="javascripts/quicksand.js"></script>
   <script src="javascripts/quicksand-app.js"></script>
-  <script src="javascripts/flickrbomb.js"></script>
+  <!-- <script src="javascripts/flickrbomb.js"></script> -->
 </body>
 </html>
