@@ -56,7 +56,8 @@
   overflow:hidden;
 }
 #container li{
-  font-family: 'Lobster', cursive;
+  /*font-family: 'Lobster', cursive;*/
+  font-family: 'Museo Sans', "museosans-web", 'serif';
   float: left;
   list-style: none outside none;
   margin: 6px;
@@ -81,8 +82,22 @@
 .nice.tabs.vertical dd a.active{
   background:#DF3030;
 }
+.nice.tabs.vertical{
+  font-family: 'Museo Sans', "museosans-web", 'serif';
+}
 #featured{
   -moz-box-shadow: 0 0 2px #000;
   -webkit-box-shadow: 0 0 2px #000;
   box-shadow: 0 0 2px #000;
+}
+@font-face {
+  font-family: "pictos-web";
+  src: url("/fonts/pictos-web.eot");
+  src: local("?"), url("/fonts/pictos-web.woff") format("woff"), url("/fonts/pictos-web.ttf") format("truetype"), url("/fonts/pictos-web.svg#webfontIyfZbseF") format("svg");
+}
+
+@font-face {
+  font-family: "museosans-web";
+  src: url('/fonts/museosans-web.eot');
+  src: url('/fonts/museosans-web.eot?iefix') format('eot'), url('/fonts/museosans-web.woff') format('woff'), url('/fonts/museosans-web.ttf') format('truetype'), url('/fonts/museosans-web.svg#webfontJHBEijmD') format('svg');
 }
