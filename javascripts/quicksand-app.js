@@ -33,8 +33,13 @@ $(document).ready(function(){
     var a = $('<a>',{
       html: text,
       href: '#',
-      class: 'nice small radius white button',
+      //class: 'nice small radius white button',
+      class: 'tag',
       data: {list:ul}
       }).appendTo('#filter');
+      var span1 = $('<span>',{html: text,class: 'tag_name',data: {list:ul}});
+      span1.appendTo('#filter .tag');
+      //var span2 = $('<span>',{class: 'tag_count'});
+      //span2.appendTo('#filter');
     }
   });
