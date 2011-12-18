@@ -1,0 +1,87 @@
+ul.todoList {
+/*
+margin: 0 auto;
+position: relative;
+*/
+}
+ul.todoList li {
+/*margin: 6px;*/
+padding: 10px;
+position: relative;
+cursor: n-resize;
+}
+ul.todoList li:hover {
+/*
+border-color: #096AC8;
+-moz-box-shadow:0 0 5px #A6E5FD;
+-webkit-box-shadow: 0 0 5px #A6E5FD;
+box-shadow: 0 0 5px #A6E5FD;
+*/
+}
+.todo .text {
+}
+.todo .actions {
+position: absolute;
+right: 5px;
+top: 5px;
+}
+.todo .actions a {
+/*
+display: block;
+width: 16px;
+height: 16px;
+overflow: hidden;
+float: left;
+text-indent: -9999px;
+margin: 3px;
+*/
+}
+.todo .actions a.edit {
+}
+.todo .actions a.delete {
+}
+.todo input {
+}
+.editTodo {
+display: inline;
+}
+.editTodo a {
+}
+a.discardChanges {
+color: #C00;
+}
+a.saveChanges {
+color: #4DB209;
+}
+/* overwriting some of the default jquery ui styles
+#addButton {
+margin: 20px auto;
+}
+a.green-button,
+a.green-button:visited {
+color: black;
+display: block;
+font-size: 10px;
+font-weight: bold;
+height: 15px;
+padding: 6px 5px 4px;
+text-align: center;
+width: 60px;
+text-shadow: 1px 1px 1px #DDDDDD;
+}
+a.green-button:hover {
+text-decoration: none;
+background-position: left bottom;
+}
+#main {
+position: relative;
+margin: 0 auto;
+width: 960px;
+}
+.note {
+font-size: 12px;
+font-style: italic;
+padding-bottom: 20px;
+text-align: center;
+}
+*/
