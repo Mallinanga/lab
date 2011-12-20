@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="stylesheets/foundation.css">
   <link rel="stylesheet" href="stylesheets/app.css">
   <link rel="stylesheet" href="stylesheets/todo.css">
+  <link rel="stylesheet" href="stylesheets/who.css">
   <!-- <link rel="stylesheet" href="stylesheets/flickrbomb.css"> -->
   <!--[if lt IE 9]>
   <link rel="stylesheet" href="stylesheets/ie.css">
@@ -27,7 +28,7 @@
         <h4 class="subheader">Logo, print and web design. Browse &amp; enjoy.</h4>
       </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="twelve columns">
         <div id="featured">
           <div style="width:980px;height:128px;text-align:center;background:url(images/logo128.png) #ffffff no-repeat left"></div>
@@ -35,7 +36,7 @@
           <div style="width:980px;height:128px;text-align:center;background:url(images/logo128.png) #ffffff no-repeat right"></div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="row">
       <div class="nine columns">
         <section id="container">
@@ -69,11 +70,17 @@
         	$todos[] = new ToDo($row);
         }
         */ ?>
-        <div id="main">
-        	<ul class="todoList"><?php //foreach($todos as $item){echo $item;}	?></ul>
-        	<a id="addButton" class="green-button" href="#">New</a>
+        <div class="onlineWidget">
+        	<div class="onlinepanel"></div>
+        	<div class="count"></div>
         </div>
-        <div id="dialog-confirm" title="Delete?"></div>
+        <div class="panel">
+          <div id="main">
+          	<ul class="todoList"><?php //foreach($todos as $item){echo $item;}	?></ul>
+          	<a id="addButton" class="green-button" href="#">New</a>
+          </div>
+          <div id="dialog-confirm" title="Delete?"></div>
+        </div>
         <!-- <nav id="filter"></nav> -->
         <ul>
           <li><a href="#" class="tag"><span class="tag_name">design</span><span class="tag_count">24</span></a></li>
@@ -96,6 +103,7 @@
   <script src="javascripts/todo.js"></script>
   <script src="javascripts/quicksand.js"></script>
   <script src="javascripts/quicksand-app.js"></script>
+  <script src="javascripts/who.js"></script>
   <script src="javascripts/easing.js"></script>
   <!-- <script src="javascripts/flickrbomb.js"></script> -->
   <script src="javascripts/jquery-ui.js"></script>
