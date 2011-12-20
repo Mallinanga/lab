@@ -1,4 +1,5 @@
 <?php
+// if(!defined('INCLUDE_CHECK')) die('YOU ARE NOT ALLOWED TO EXECUTE THIS FILE DIRECTLY');
 $db_host='localhost';
 $db_user='root';
 $db_pass='ourt';
@@ -6,4 +7,5 @@ $db_database='labs';
 $link = @mysql_connect($db_host,$db_user,$db_pass) or die('UNABLE TO ESTABLISH A DB CONNECTION');
 mysql_set_charset('utf8');
 mysql_select_db($db_database,$link);
+mysql_query("SET names UTF8");
 ?>
