@@ -55,7 +55,7 @@ $(document).ready(function () {
   */
   $('#featured').orbit({
     animation: 'fade',
-    advanceSpeed: 4000,
+    advanceSpeed: 1000,
     timer: true,
     directionalNav: false,
     captions: false,
@@ -71,5 +71,30 @@ $(document).ready(function () {
     $(this).stop().animate({ paddingRight: ($('.tag_count', this).outerWidth() - 5) }, 'easeInOutExpo');
   }, function() {
     $(this).stop().animate({ paddingRight: 5 }, 'easeInOutExpo');
+  });
+  $('#container li').each(function(){
+    $(this)
+    // .css({
+    //   "transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg)',
+    //   "-webkit-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg)',
+    //   "-moz-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg)'
+    // })
+    .hover(function(){
+      $(this).css({
+        "transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1.05)',
+        "-webkit-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1.05)',
+        "-moz-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1.05)'
+      })
+    },function(){
+      $(this).css({
+        // "transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1)',
+        // "-webkit-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1)',
+        // "-moz-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1)'
+        "transform": 'rotate(0deg) scale(1)',
+        "-webkit-transform": 'rotate(0deg) scale(1)',
+        "-moz-transform": 'rotate(0deg) scale(1)'
+      })
+    }
+    );
   });
 });
