@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="stylesheets/todo.css">
   <link rel="stylesheet" href="stylesheets/who.css">
   <!-- <link rel="stylesheet" href="stylesheets/flickrbomb.css"> -->
+  <link rel="stylesheet" href="stylesheets/print.css" media="print">
+  <link rel="stylesheet" href="stylesheets/holmes.min.css">
   <!--[if lt IE 9]>
   <link rel="stylesheet" href="stylesheets/ie.css">
   <![endif]-->
@@ -20,7 +22,7 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
-<body>
+<body class="__holmes-debug__">
   <div class="container">
     <div class="row">
       <div class="twelve columns">
@@ -103,9 +105,14 @@
   <script src="javascripts/todo.js"></script>
   <script src="javascripts/quicksand.js"></script>
   <script src="javascripts/quicksand-app.js"></script>
-  <script src="javascripts/who.js"></script>
+  <!-- <script src="javascripts/who.js"></script> -->
   <script src="javascripts/easing.js"></script>
   <!-- <script src="javascripts/flickrbomb.js"></script> -->
   <script src="javascripts/jquery-ui.js"></script>
+  <script src="javascripts/helium.js"></script>
+  <script>
+    // window.addEventListener('load',function(){helium.init();},false);
+  </script>
+  </script>
 </body>
 </html>
