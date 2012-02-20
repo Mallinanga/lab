@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="stylesheets/app.css">
   <link rel="stylesheet" href="stylesheets/todo.css">
   <link rel="stylesheet" href="stylesheets/who.css">
+  <link rel="stylesheet" href="stylesheets/3drollovers.css">
   <!-- <link rel="stylesheet" href="stylesheets/flickrbomb.css"> -->
   <link rel="stylesheet" href="stylesheets/print.css" media="print">
   <link rel="stylesheet" href="stylesheets/holmes.min.css">
@@ -26,6 +27,14 @@
   <div class="container">
     <div class="row">
       <div class="twelve columns">
+        <li class="flip box fade hideback" style="float:left">
+          <a class="rollover" href="#">
+            <figure class="cube">
+              <img src="http://placehold.it/128" class="front" alt="Labs">
+              <img src="http://placehold.it/128" class="back" alt="Bee">
+            </figure>
+          </a>
+        </li>
         <h1>Yeah baby, Labs!</h1>
         <h4 class="subheader">Logo, print and web design. Browse &amp; enjoy.</h4>
       </div>
