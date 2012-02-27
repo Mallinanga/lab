@@ -1,100 +1,94 @@
-$(document).ready(function () {
-  function activateTab($tab) {
-    var $activeTab = $tab.closest('dl').find('a.active'),
-    contentLocation = $tab.attr("href") + 'Tab';
-    $activeTab.removeClass('active');
-    $tab.addClass('active');
-    $(contentLocation).closest('.tabs-content').find('li').hide();
-    $(contentLocation).show();
-  }
-  $('dl.tabs').each(function () {
-    var tabs = $(this).children('dd').children('a');
-    tabs.click(function (e) {
-      activateTab($(this));
+$(function() {
+//Let's set up some shit
+	var output 		=	$('#output'),
+		snippets 	= 	$('#snippets'),
+		message 	= 	$('#message'),
+		gimme		=	$('#gimme'),
+		reset		= 	$('#reset'),
+		app			=	$('#application');
+		
+	$(snippets).hide();
+	$(output).fadeTo(0, 0.0)
+
+//Let's work out what people want
+	$(app).find('article').click(function(){
+		$(this).toggleClass('yo no');
+	});
+
+//Select everything
+	$('#all').click(function(){
+		$(app).find('article').removeClass('no').addClass('yo');
+	});
+
+//...and then give it to them
+	$(gimme).click(function(){
+		var quantity = $('article.yo').length;
+		if(quantity > 0){
+			$(output).text('').append('&#60;?php ');
+			$(app).find('article.yo').each(function(){
+				var thisSnippet = '#' + $(this).data('snippet');
+				var wantedCode = $(snippets).find(thisSnippet).html();
+				$(output).append(wantedCode)
+						 .animate({'height':'200px', 'opacity':'1.0'},'fast');
+			});
+			$(output).append('?&#62;');
+		}
+		else {
+			$(message).find('h1').text('Ohhh no!');
+        	$(message).find('p').text('Sorry, but you need to select at least one snippet!');
+ 			$(message).fadeIn(500)
+		}
+	});
+	
+//Click handler for our reset button
+	$(reset).click(function(){
+		$(output).animate({'height':'0px', 'opacity':'0.0'},'fast');
+		$(app).find('article').removeClass('yo').addClass('no');
+	});
+	
+
+//when you click on the code it will select everything
+	$(output).click(function(){ 
+ 		$(this).focus().select();
+	});
+
+//first time the user copies thier selection thank them for using the service!
+	$(output).one('copy', function(){
+        $(message).find('h1').text('Thanks for useing WPFunction.Me');
+        $(message).find('p').text('Go ahead and paste this code into your functions.php file in your theme.');
+ 		$(message).fadeIn(500)
+	});
+
+//remove the message layer if the user clicks anywhere
+	$(message).click(function(){
+		$(this).fadeOut(200);
+		return false;
+	});
+	
+//safe email address's
+    $('span.safeemail').each(function(i) {
+		var e = $(this).html();
+		e = e.replace(" [at] ", "@");
+		e = e.replace(" [dot] ", ".");
+		$(this).html(e).replaceWith("<a href=\"mailto:" + $(this).text() + "\">" + $(this).text() + "</a>");
     });
-  });
-  if (window.location.hash) {
-    activateTab($('a[href="' + window.location.hash + '"]'));
-  }
-  /* PLACEHOLDER FOR FORMS ------------- */
-  /* Remove this and jquery.placeholder.min.js if you don't need :) */
-  //$('input, textarea').placeholder();
-  /* DROPDOWN NAV ------------- */
-  /*
-  $('.nav-bar li a, .nav-bar li a:after').each(function() {
-  $(this).data('clicks', 0);
-  });
-  $('.nav-bar li a, .nav-bar li a:after').bind('touchend click', function(e){
-  e.stopPropagation();
-  e.preventDefault();
-  var f = $(this).siblings('.flyout');
-  $(this).data('clicks', ($(this).data('clicks') + 1));
-  if (!f.is(':visible') && f.length > 0) {
-  $('.nav-bar li .flyout').hide();
-  f.show();
-  }
-  });
-  $('.nav-bar li a, .nav-bar li a:after').bind(' touchend click', function(e) {
-  e.stopPropagation();
-  e.preventDefault();
-  if ($(this).data('clicks') > 1) {
-  window.location = $(this).attr('href');
-  }
-  });
-  $('.nav-bar').bind('touchend click', function(e) {
-  e.stopPropagation();
-  if (!$(e.target).parents('.nav-bar li .flyout') || $(e.target) != $('.nav-bar li .flyout')) {
-  e.preventDefault();
-  }
-  });
-  $('body').bind('touchend', function(e) {
-  if (!$(e.target).parents('.nav-bar li .flyout') || $(e.target) != $('.nav-bar li .flyout')) {
-  $('.nav-bar li .flyout').hide();
-  }
-  });
-  */
-  $('#featured').orbit({
-    animation: 'fade',
-    advanceSpeed: 1000,
-    timer: true,
-    directionalNav: false,
-    captions: false,
-    captionAnimation: 'none',
-    bullets: true,
-  });
-  $('.tag').each(function(i) {
-    setTimeout(function() {
-      $('.tag:eq('+i+')').css({ display: 'block', opacity: 0 }).stop().animate({ opacity: 1 }, 'easeInOutExpo'); 
-      }, 250 * (i + 1))
-  });
-  $('.tag').hover(function() {
-    $(this).stop().animate({ paddingRight: ($('.tag_count', this).outerWidth() - 5) }, 'easeInOutExpo');
-  }, function() {
-    $(this).stop().animate({ paddingRight: 5 }, 'easeInOutExpo');
-  });
-  $('#container li').each(function(){
-    $(this)
-    // .css({
-    //   "transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg)',
-    //   "-webkit-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg)',
-    //   "-moz-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg)'
-    // })
-    .hover(function(){
-      $(this).css({
-        "transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1.05)',
-        "-webkit-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1.05)',
-        "-moz-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1.05)'
-      })
-    },function(){
-      $(this).css({
-        // "transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1)',
-        // "-webkit-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1)',
-        // "-moz-transform": 'rotate(' + (Math.floor(Math.random()*10)-5) + 'deg) scale(1)'
-        "transform": 'rotate(0deg) scale(1)',
-        "-webkit-transform": 'rotate(0deg) scale(1)',
-        "-moz-transform": 'rotate(0deg) scale(1)'
-      })
-    }
-    );
-  });
+	
+//Set our isotope elements
+	$('#choices').isotope({ filter: 'article',layoutMode : 'fitRows' });
+
+//Filter the isotope elements
+	$('#filters button').click(function(){
+	var selector = $(this).attr('data-filter');
+	$('#choices').isotope({ filter: selector });
+	return false;
+	});
+	
+//add class for selected filter buttons
+	var filters = $('#filters');
+
+	$(filters).find('button').click(function(){
+		$(filters).find('button.selected').removeClass('selected');
+		$(this).addClass('selected');
+	});
+
 });
