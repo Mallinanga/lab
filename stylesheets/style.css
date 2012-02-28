@@ -204,6 +204,7 @@ a#close:hover {
 	background: #fff;
 	position: relative;
 	width: 230px;
+	height: 300px;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
@@ -217,60 +218,60 @@ a#close:hover {
 	-moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
 	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
 }
-#application article h1:before {
-	content: '';
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	top: -10px;
-	left: -15px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	background: #e2e2e2;
-	background: -moz-linear-gradient(-45deg,  #e2e2e2 0%, #dbdbdb 31%, #d1d1d1 50%, #fefefe 100%);
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#e2e2e2), color-stop(31%,#dbdbdb), color-stop(50%,#d1d1d1), color-stop(100%,#fefefe));
-	background: -webkit-linear-gradient(-45deg,  #e2e2e2 0%,#dbdbdb 31%,#d1d1d1 50%,#fefefe 100%);
-	background: -o-linear-gradient(-45deg,  #e2e2e2 0%,#dbdbdb 31%,#d1d1d1 50%,#fefefe 100%);
-	background: -ms-linear-gradient(-45deg,  #e2e2e2 0%,#dbdbdb 31%,#d1d1d1 50%,#fefefe 100%);
-	background: linear-gradient(-45deg,  #e2e2e2 0%,#dbdbdb 31%,#d1d1d1 50%,#fefefe 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 );
-	-webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.6);
-	-moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.6);
-	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.6);
-	cursor: pointer;
-}
-#application article h1:after {
-	content: '';
-	position: absolute;
-	width: 36px;
-	height: 36px;
-	top: -8px;
-	left: -13px;
-	text-align:center;
-	background: #555;
-	background:url('/images/codebg.png')repeat;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	-webkit-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
-	box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+/*#application article h1:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -10px;
+  left: -15px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #e2e2e2;
+  background: -moz-linear-gradient(-45deg,  #e2e2e2 0%, #dbdbdb 31%, #d1d1d1 50%, #fefefe 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#e2e2e2), color-stop(31%,#dbdbdb), color-stop(50%,#d1d1d1), color-stop(100%,#fefefe));
+  background: -webkit-linear-gradient(-45deg,  #e2e2e2 0%,#dbdbdb 31%,#d1d1d1 50%,#fefefe 100%);
+  background: -o-linear-gradient(-45deg,  #e2e2e2 0%,#dbdbdb 31%,#d1d1d1 50%,#fefefe 100%);
+  background: -ms-linear-gradient(-45deg,  #e2e2e2 0%,#dbdbdb 31%,#d1d1d1 50%,#fefefe 100%);
+  background: linear-gradient(-45deg,  #e2e2e2 0%,#dbdbdb 31%,#d1d1d1 50%,#fefefe 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 );
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}*/
+/*#application article h1:after {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  top: -8px;
+  left: -13px;
+  text-align:center;
+  background: #555;
+  background:url('/images/codebg.png')repeat;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
 }
 #application article.yo h1:after {
-	content:'✓';
-	font-weight:bold;
-	color:#41A317;
-	font-size:60px;
-	line-height: 40px;
-	text-shadow:0px 2px 0 #fff, 1px 1px 3px #000;
+  content:'✓';
+  font-weight:bold;
+  color:#41A317;
+  font-size:60px;
+  line-height: 40px;
+  text-shadow:0px 2px 0 #fff, 1px 1px 3px #000;
 }
 #application article.no h1:after {
-	content:'✘';
-	color:#000;
-	font-size:40px;
-	line-height: 40px;
-}
+  content:'✘';
+  color:#000;
+  font-size:40px;
+  line-height: 40px;
+}*/
 #application article a {
 	color:#444;
 	border-bottom:1px solid #E26150;

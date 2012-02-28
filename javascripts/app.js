@@ -29,7 +29,7 @@ $(function() {
 				var thisSnippet = '#' + $(this).data('snippet');
 				var wantedCode = $(snippets).find(thisSnippet).html();
 				$(output).append(wantedCode)
-						 .animate({'height':'200px', 'opacity':'1.0'},'fast');
+						 .animate({'height':'300px', 'opacity':'1.0'},'fast');
 			});
 			$(output).append('?&#62;');
 		}

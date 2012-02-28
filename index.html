@@ -2,37 +2,27 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="lab.paganis.net">
+  <meta name="author" content="Panos Paganis">
   <title>lab.paganis.net</title>
   <link href='favicon.ico' rel='shortcut icon'>
-  <!--<link href="stylesheets/bootstrap.min.css" rel="stylesheet">-->
+  <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
   <link href="stylesheets/reset.css" rel="stylesheet">
   <link href="stylesheets/style.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'> -->
   <script src="javascripts/jquery.min.js"></script>
   <script src="javascripts/snippet.js"></script>
   <script src="javascripts/isotope.js"></script>
   <script src="javascripts/app.js"></script>
-  <!--<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-28741211-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-  </script>-->
 </head>
 <body>
-<!--  <nav id="refer">
-    <a href="http://www.wpfill.me">wpfill.me</a>
-    <a href="index.html" class="selected">wpfunction.me</a>
-  </nav>-->
+  <nav id="refer">
+    <a href="#">paganis.net</a>
+    <a href="#" class="selected">lab.paganis.net</a>
+  </nav>
   <header id="siteheader" class="group">
     <hgroup>
-      <h1><a href="index.html" title="WordPress functions.php snippets"><abbr title="WordPress">Lab</abbr> <br>Paganis <br>net</a></h1>
+      <h1><a href="index.html" title="lab.paganis.net"><abbr title="Experiments">Lab</abbr> <br>Paganis <br>net</a></h1>
       <h2></h2>
       <h3></h3>
     </hgroup>
@@ -45,17 +35,18 @@
       </menu>
       <menu type="toolbar" id="filters" label="filter the snippets">
         <button data-filter="*" class="selected">Show All</button>
-        <button data-filter=".appearance">Appearance</button>
-        <button data-filter=".functionality">Functionality</button>
-        <button data-filter=".images">Images</button>
+        <button data-filter=".appearance">CSS</button>
+        <button data-filter=".functionality">Javascript</button>
+        <button data-filter=".images">PHP</button>
         <button data-filter=".performance">Performance</button>
         <button data-filter=".security">Security</button>
       </menu>
     </menu>
     <div id="choices">
       <article data-snippet="themeeditor" class="no appearance">
-        <h1>Lab</h1>
         <p><img src="http://placehold.it/230x130&text=Lab"></p>
+        <h1>Lab</h1>
+        <p>bla bla bla</p>
       </article>
       <article data-snippet="thumbs" class="no images">
         <h1>Lab</h1>
@@ -210,9 +201,9 @@
         <p>Removes the code editor in the admin which allows anybody with access to modify the theme and plugin files.</p>
       </article> -->
     </div>
-<!--    <menu type="toolbar" class="group get" label="get your code">
-      <button id="gimme">Get Your Code!</button>
-    </menu>-->
+    <menu type="toolbar" class="group get" label="get your code">
+      <button id="gimme">Show me</button>
+    </menu>
     <textarea id="output" class="php"></textarea>
   </section><!-- application -->
   <footer id="sitefooter">
@@ -265,7 +256,7 @@
       </aside>-->
     </article>
   </footer>
-<!--  <aside id="snippets">
+ <aside id="snippets">
     <div id="mytestsnippet">
       //test snippet
       gay testing
@@ -427,7 +418,7 @@
       }
       add_filter('the_excerpt', 'replace_excerpt');
     </div>
-  </aside>-->
+  </aside>
   <aside id="message" style="display:none;">
     <div>
       <a class="close" href="#">&#10006;</a>
