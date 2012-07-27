@@ -1,0 +1,94 @@
+body{
+/*  background: url(../images/bg.jpg) repeat 0 0; */
+}
+#container{
+  display:block;
+  overflow:hidden;
+}
+#container ul{
+  padding: 20px;
+  padding-bottom: 25px;
+}
+#container li{
+  font-family: 'Museo Sans', "museosans-web", 'serif';
+  float: left;
+  list-style: none outside none;
+  margin: 6px;
+  position: relative;
+  height:50px;
+  width:216px;
+  background: #FFFFFF;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+#container li:hover{
+  background: #00A6FC;
+  color: #FFFFFF;
+  box-shadow: 5px 5px 20px #666;
+  -moz-box-shadow: 5px 5px 20px #666;
+  -webkit-box-shadow: 5px 5px 20px #666;
+  z-index: 2;
+}
+#container li a{
+  display: block;
+}
+#container ul{
+  overflow:hidden;
+}
+#container ul.hidden{
+  display:none;
+}
+#featured{
+  overflow: hidden;
+}
+@font-face {
+  font-family: "museosans-web";
+  src: url('/fonts/museosans-web.eot');
+  src: url('/fonts/museosans-web.eot?iefix') format('eot'), url('/fonts/museosans-web.woff') format('woff'), url('/fonts/museosans-web.ttf') format('truetype'), url('/fonts/museosans-web.svg#webfontJHBEijmD') format('svg');
+}
+.tag {
+  background: url(../images/tag.png) no-repeat 0 0;
+  color: #3f3f3f;
+  display: none;
+  float: left;
+  height: 25px;
+  line-height: 1;
+  margin: 5px;
+  padding: 0 5px 0 8px;
+  position: relative;
+  text-decoration: none;
+}
+.tag:hover {
+  cursor: pointer;
+}
+.tag:active {
+  top: 1px;
+}
+.tag span {
+  display: block;
+  float: left;
+}
+.tag_name {
+  background: url(../images/tag.png) no-repeat 100% -25px;
+  height: 19px;
+  padding: 6px 10px 0 0;
+  position: relative;
+  text-shadow: 0 1px 1px #fff;
+  z-index: 10;
+}
+.tag_count {
+  background: url(../images/tag.png) no-repeat 100% -50px;
+  color: #fff;
+  height: 19px;
+  padding: 5px 10px 0;
+  position: absolute;
+  right: 0;
+  text-shadow: 0 -1px 0 #c54a0c;
+  top: 1px;
+  z-index: 5;
+}
