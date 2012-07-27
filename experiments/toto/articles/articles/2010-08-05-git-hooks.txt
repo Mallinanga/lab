@@ -1,9 +1,0 @@
----
-author: Panos G. Pgn
-title: git hooks
-tags: unix
-date: 05/08/2010
-
-.git/hooks/post-commit
-    #!/bin/sh
-    afplay ~/.git/happykids.wav > /dev/null 2>&1 &

@@ -1,9 +1,0 @@
----
-author: Panos G. Pgn
-title: less.js
-tags: dev
-date: 03/10/2010
-
-to make your browser update every time you save a file (very handy feature), use the watch method. place the following at the bottom of your project. of course, this assume that you’ve already setup less.js.
-    less.env = 'development';
-    less.watch();

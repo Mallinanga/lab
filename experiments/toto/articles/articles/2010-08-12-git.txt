@@ -1,9 +1,0 @@
----
-author: Panos G. Pgn
-title: git
-tags: unix
-date: 12/08/2010
-
-&nbsp;
-    $ git config --global user.name "bob"
-    $ git config --global user.email bob@...

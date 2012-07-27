@@ -1,8 +1,0 @@
----
-title: display training users
-date: 16/07/2010
-tags: loulakis
-
-Things to remember:
-    :::shell
-    $ awk -F: '{if ($3>=500 && $3<=2000) print $1}' /etc/passwd | sort

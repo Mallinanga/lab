@@ -1,8 +1,0 @@
----
-title: video rotate
-date: 16/07/2010
-tags: misc
-
-&nbsp;
-    $ mencoder -vf rotate=1 -ovc lavc -oac copy input.avi -o output.avi
-    $ mencoder -vf rotate=1 -ovc copy -oac copy input.avi -o output.avi

@@ -1,8 +1,0 @@
----
-author: Panos G. Pgn
-title: gmail
-tags: gmail
-date: 03/10/2010
-
-find unlabeled email
-    -label:{developing finance google hive hosting hotmail loulakis updates} -in:chat -from:me -in:trash -in:inbox

@@ -1,6 +1,0 @@
----
-title: on telekoms port
-date: 16/07/2010
-tags: loulakis
-
-99	TCP	6502	90
