@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>Jquery Parallax Scrolling Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css">
+    <link rel="stylesheet" type="text/css" href="css/tut.css">
+    
+    <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.2-min.js"></script>
+    
+    <script type="text/javascript">
+	$(document).ready(function() {  
+		$('a.link').click(function () {  
+			$('#wrapper').scrollTo($(this).attr('href'), 800);
+			setPosition($(this).attr('href'), '#cloud1', '0px', '400px', '800px', '1200px')
+			setPosition($(this).attr('href'), '#cloud2', '0px', '800px', '1600px', '2400px')
+			$('a.link').removeClass('selected');  
+			$(this).addClass('selected');
+			return false;  
+		});  
+	});
+	function setPosition(check, div, p1, p2, p3, p4) {
+	if(check==='#box1')
+		{
+			$(div).scrollTo(p1, 800);
+		}
+	else if(check==='#box2')
+		{
+			$(div).scrollTo(p2, 800);
+		}
+	else if(check==='#box3')
+		{
+			$(div).scrollTo(p3, 800);
+		}
+	else
+		{
+			$(div).scrollTo(p4, 800);
+		}
+	};
+	</script>
+</head>
+
+<body>
+	<div id="cloud1" class="clouds">
+    	<div id="clouds-small"></div>
+    </div><!-- end clouds -->
+    <div id="cloud2" class="clouds">
+        <div id="clouds-big"></div>
+    </div><!-- end clouds -->
+	<div id="header">
+   		<h1 id="logo">Scrolling Clouds</h1>
+    	<ul id="menu">
+       	  <li><a href="#box1" class="link">Home</a></li>
+            <li><a href="#box2" class="link">Box 2</a></li>
+            <li><a href="#box3" class="link">Box 3</a></li>
+            <li><a href="#box4" class="link">Box 4</a></li>
+      </ul>
+</div><!-- end header -->
+	<div id="wrapper">
+    	<ul id="mask">
+        	<li id="box1" class="box">
+            	<a name="box1"></a>
+                <div class="content"><div class="inner">Home Box</div></div>
+            </li><!-- end box1 -->
+            <li id="box2" class="box">
+            	<a name="box2"></a>
+                <div class="content"><div class="inner">Box 2</div></div>
+            </li><!-- end box2 -->
+            <li id="box3" class="box">
+            	<a name="box3"></a>
+                <div class="content"><div class="inner">Box 3</div></div>
+            </li><!-- end box3 -->
+            <li id="box4" class="box">
+            	<a name="box4"></a>
+                <div class="content"><div class="inner">Box 4</div></div>
+            </li><!-- end box4 -->
+        </ul><!-- end mask -->
+    </div><!-- end wrapper -->
+</body>
+</html>

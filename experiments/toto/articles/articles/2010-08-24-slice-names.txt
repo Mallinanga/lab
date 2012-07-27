@@ -1,0 +1,13 @@
+---
+author: Panos G. Pgn
+title: slice names
+tags: slice
+date: 24/08/2010
+
+* pride (superbia)
+* greed (avaritia)
+* lust (luxuria)
+* envy (invidia)
+* gluttony (gula)
+* wrath (ira)
+* sloth (acedia)

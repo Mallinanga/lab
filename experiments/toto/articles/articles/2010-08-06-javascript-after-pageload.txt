@@ -1,0 +1,8 @@
+---
+author: Panos G. Pgn
+title: javascript after pageload
+tags: dev
+date: 06/08/2010
+
+only works with internet explorer
+    <script src="script.js" type="text/javascript" defer="defer"></script>

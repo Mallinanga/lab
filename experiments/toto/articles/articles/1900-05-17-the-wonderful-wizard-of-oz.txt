@@ -1,0 +1,13 @@
+---
+title: the wonderful wizard of oz
+date: 1900/05/17
+tags: misc
+
+Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry,
+who was a farmer, and Aunt Em, who was the farmer's wife.
+
+There are good things and bad things about "Unobtrustive JavaScript." One bad thing: it's hard to tell what JavaScript is touching an element.
+
+Idea: Only ever use classes and ids prefix with js- when touching the DOM with JavaScript.
+
+For example:

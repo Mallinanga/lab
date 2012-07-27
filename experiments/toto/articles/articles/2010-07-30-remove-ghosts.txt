@@ -1,0 +1,14 @@
+---
+author: Panos G. Pgn
+title: remove ghosts
+tags: loulakis
+date: 30/07/2010
+
+&nbsp;
+    @ECHO OFF
+    DEVCON find * | FIND /I /V "matching device(s)" | FIND /I /V "ROOT\LEGACY_" | FIND /I /V "SW\" > C:\Temp\ghosts-on.txt
+    FOR /F "tokens=1 delims=: " %%A IN ('DEVCON findall * ^| FIND /I /V "matching device(s)" ^| FIND /I /V "ROOT\LEGACY_" ^| FIND /I /V "SW\" ^| FIND /I /V "HTREE\ROOT"') DO (
+    	TYPE "C:\Temp\ghosts-on.txt" | FIND "%%~A" >NUL
+    	REM IF ERRORLEVEL 1 DEVCON remove "@%%~A"
+    	IF ERRORLEVEL 1 ECHO remove "@%%~A" > C:\Temp\ghosts.txt
+    )

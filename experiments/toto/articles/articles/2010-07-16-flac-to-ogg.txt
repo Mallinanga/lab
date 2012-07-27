@@ -1,0 +1,7 @@
+---
+title: flac to ogg
+date: 16/07/2010
+tags: misc
+
+&nbsp;
+    $ ffmpeg -i file.flac -vn -acodec pcm_s16le -f s16le - | oggenc2 -q 3 --raw - --output=file.ogg

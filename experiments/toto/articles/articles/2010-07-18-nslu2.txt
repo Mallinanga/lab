@@ -1,0 +1,22 @@
+---
+author: Panos G. Pgn
+title: nslu2
+tags: nslu2
+date: 18/07/2010
+
+&nbsp;
+    echo "ROOT=<Your root device>" > /etc/initramfs-tools/conf.d/my-root-device-hack
+    update-initramfs -k all -u
+    update-initramfs: Generating /boot/initrd.img-2.6.18-3-ixp4xx
+    flash-kernel
+&nbsp;
+    update-initramfs -u
+    flash-kernel
+&nbsp;
+    apex-env setenv cmdline 'console=ttyS0,115200 rtc-x1205.probe=0,0x6f noirqdebug rootdelay=10 root=/dev/disk/by-label/DEBIAN rootflags=data=journal'
+&nbsp;
+    cat /dev/mtdblock* > /mnt/mybook/dumps/slug-flash.bin
+&nbsp;
+    mount -o remount,ro /dev/root
+&nbsp;
+    /usr/bin/beep -e /dev/input/event0 -f 523.251 -l 100 -D 100 -n -f 391.995 -l 100 -D 100 -n -f 329.628 -l 100 -D 100 -n -f 261.626 -l 200 -D 100

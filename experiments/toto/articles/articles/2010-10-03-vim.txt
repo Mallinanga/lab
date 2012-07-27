@@ -1,0 +1,7 @@
+---
+author: Panos G. Pgn
+title: vim
+tags: vim
+date: 03/10/2010
+
+use :sp and :vsp to create new windows from within normal mode

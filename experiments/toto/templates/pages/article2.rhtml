@@ -1,0 +1,39 @@
+<div class="post">
+  <h2><%= title %></h2>
+	<% if defined?(category) && category == "book" %>
+		<div class="excerpt">
+			<p>Author: <%= book_author %></p>
+			<div class="isbn"><%= isbn %></div>
+			<%= amazon %>
+		</div>
+	<% else %>
+  	<div class="meta"><%= author %> <span class="meta_date">&#183; <%= date %></span></div>
+	<% end %>
+  <div class="comments_count"><a href="<%= url %>#disqus_thread">0</a></div>
+  <%= body %>
+
+	<div class="after_post">
+		<div class="next_actions">
+			<h4>Liked this post?</h4>
+			<p>Tweet and share it:</p>
+			<p>
+				<script type="text/javascript">
+					tweetmeme_source = 'usabilitypost';
+					tweetmeme_service = 'bit.ly';
+				</script>
+				<script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+			</p>
+			<p class="share_button">
+				<script type="text/javascript">
+				a2a_onclick = 1;
+				</script>
+				<a class="a2a_dd addtoany_share_save" href="http://www.addtoany.com/share_save"><img src="http://img.usabilitypost.com/misc/sharesave.png" width="168" height="61" border="0" alt="Share/Bookmark"/></a><script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+			</p>
+		</div>
+		<div class="after_post_subscribe">
+			<h4>Subscribe</h4>
+			<p>To get all new posts delivered straight to you subscribe by: <a href="http://feeds.feedburner.com/usabilitypost">RSS</a>, <a href="http://www.feedburner.com/fb/a/emailverifySubmit?feedId=2274464">Email</a> or <a href="http://www.twitter.com/usabilitypost">Twitter</a></p>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+<div id="bottom_bridge_content">
+						&bull;
+						<% article[:tags].split.each do |tag| %>
+							<a href="/tags/<%= tag %>"><%= tag %></a> &bull;
+						<% end %>
+						<div id="bottom_bridge">
+							<div class="bridge-element" id="bottom_bridge_left"></div>
+							<div class="bridge-element" id="bottom_bridge_middle"></div>
+							<div class="bridge-element" id="bottom_bridge_right"></div>
+						</div>
+					</div>
+					<article class="post">
+						<!--<div id="spacer"></div>-->
+						<header>
+							<% if false %><h1>&#8592; <%= markdown article.title %></h1><% end %>
+							<h1><a href="javascript:history.go(-1)">&#8592; <%= title %></a></h1>
+						</header>
+						<section class="content">
+<%= body %>
+						</section>
+						<% if false %>
+						<section class="meta">
+							<span>&bull;
+							<% article[:tags].split.each do |tag| %>
+							<a href="/tags/<%= tag %>"><%= tag %></a> &bull;
+							<% end %>
+							</span>
+						</section>
+						<% end %>
+					</article>

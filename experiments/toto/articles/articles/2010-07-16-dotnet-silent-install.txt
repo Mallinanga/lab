@@ -1,0 +1,7 @@
+---
+title: dotnet silent install
+date: 16/07/2010
+tags: loulakis
+
+Things to remember:
+    dotnetfx.exe /q:a /c:"install /l /q"
