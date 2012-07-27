@@ -1,0 +1,3 @@
+<% @articles.select {|a| a[:category] == 'book' }[0...10].each do |article| %>
+... html here to render book articles ...
+<% end %>

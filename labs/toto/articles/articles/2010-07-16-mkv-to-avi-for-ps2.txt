@@ -1,0 +1,12 @@
+---
+title: mkv to avi for ps2
+date: 16/07/2010
+tags: misc
+
+&nbsp;
+    $ mencoder halcyon-swingers.720p-x264.mkv -ffourcc xvid -ovc lavc -lavcopts vcodec=mpeg4:threads=8:vhq:vbitrate=1800 -oac mp3lame -lameopts vbr=5 -o swing.avi
+    $ mencoder -ovc xvid -xvidencopts bitrate=1800 -oac mp3lame -lameopts abr:br=160 "jeff dunham - spark of insanity 2007.mkv" -o "jeff dunham - spark of insanity 2007.avi" -vf scale=640:-2
+
+    # -vf rotate = 0,1,2, or 3
+    # -ovc: lavc is a good choice
+    # -oac: try: lavc, mp3lame, or copy

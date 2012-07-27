@@ -1,0 +1,116 @@
+---
+author: Panos G. Pgn
+title: dev tmp
+tags: dev
+date: 18/07/2010
+
+posts to del.icio.us including any highlighted text without prompting if none is selected: javascript:h=location.href;t=document.title;e = "" + (window.getSelection ? window.getSelection() : document.getSelection ? document.getSelection() : document.selection.createRange().text); location="http://del.icio.us/USERNAME?jump=close&url=" + escape(h) + "&title=" + escape(t) + "&extended=" + escape(e).replace(/ /g, "+"); void 0
+extended del.icio.us post with prompt: javascript:h=location.href;t=document.title;e = "" + (window.getSelection ? window.getSelection() : document.getSelection ? document.getSelection() : document.selection.createRange().text); if (!e) e = prompt("You didn't select any text. Enter a description:", ""); if (e!=null) location="http://del.icio.us/USERNAME?jump=close&url=" + escape(h) + "&title=" + escape(t) + "&extended=" + escape(e).replace(/ /g, "+"); void 0
+popup auto-complete prefilled del.icio.us post: javascript:(function(){e ='' + (window.getSelection ? window.getSelection() : document.getSelection ? document.getSelection()  : document.selection.createRange().text);open(' http://del.icio.us/post?v=4;noui=yes;jump=close;url='+encodeURIComponent(location.href)+';title='+encodeURIComponent(document.title)+';notes='+encodeURIComponent(e),'delicious','toolbar=no,width=700,height=400')})()
+
+
+hr
+{
+color: #C0C0C0;
+}
+h1
+{
+font: bold 13pt Verdana,Arial;
+color: #E05010;
+/*color: #C02000;*/
+/*color: #00B040;*/
+margin-top: 35px;
+}
+input.jumpcode
+{
+border: dotted 1px #D8D8D8;
+background: #FFFFFF;
+color: #606060;
+font: 8pt Verdana,Arial;
+position: relative;
+margin: -2px 0 -1px 1px;
+padding: 0 2px;
+}
+
+input.text, textarea.text
+{
+border: solid 1px #C0C0C0;
+background: #FFFFFF;
+font: 8pt Verdana,Arial;
+}
+textarea.text
+{
+scrollbar-arrow-color: #666666;
+scrollbar-base-color: #FFFFFF;
+scrollbar-darkshadow-color: #FFFFFF;
+scrollbar-face-color: #FFFFFF;
+scrollbar-highlight-color: #FFFFFF;
+scrollbar-shadow-color: #FFFFFF;
+scrollbar-track-color: #FFFFFF;
+}
+input.radio
+{
+margin-top: -3;
+position: relative;
+top: 2;
+}
+input.button
+{
+border: solid 1px #C0C0C0;
+background: #E0E0E0;
+font: 8pt Verdana,Arial;
+height: 17px;
+}
+<input class=jumpcode maysel value=\'\' onkeypress=\'jump(event, this.value)\' onfocus=\'this.select()\'>
+a:link
+{
+text-decoration: none;
+color: #3030FF;
+}
+
+a:active
+{
+text-decoration: none;
+color: red;
+}
+
+a:visited
+{
+text-decoration: none;
+color: #3030FF;
+}
+
+a:hover
+{
+text-decoration: none;
+border-bottom: solid 1px #A0A0A0;
+}
+
+
+<a href="#" title="header=[header text] body=[body text]">My link</a>
+
+
+  <!-- <form class="search" action='$ScriptUrl/Site/Search'><!-- searchbox -->
+      <div>
+        <input type='hidden' name='action' value='search' />
+      <input type='hidden' name='pagename' value='Site/Search' />
+        <input class='searchbox' size="10" type='text' name='q' value='' /> <input type="submit" value="$[Search]" />
+    </div>
+  </form><!-- /searchbox --> -->
+
+
+[@<li>
+<h2><?php _e('del.icio.us'); ?></h2>
+<p><script type="text/javascript" src="http://del.icio.us/feeds/js/Mallinanga?count=10"></script>
+<noscript><a href="http://del.icio.us/Mallinanga">my del.icio.us</a></noscript></p>
+</li>@]
+
+[@
+Markup('weather', 'directives',
+  '/\\(:weather:\\)/',
+  Keep("<script src='http://voap.weather.com/weather/oap/75025?template=LAWNH&amp;'></script>"));
+@]
+
+@@<div class="row bordertop borderbottom"> <!-- pageActions bottom -->
+<div class="element left">$[Last modified on $LastModified]</div>
+</div><!-- /pageActions bottom -->@@

@@ -1,0 +1,7 @@
+---
+title: grep for what?
+date: 19/07/2010
+tags: loulakis
+
+&nbsp;
+    C:\Panos\grep\bin\grep.exe -E -U "Event|Ονομα|Επίθετο|Τίτλος|Επάγγελμα|Εταιρεία|Τηλέφωνο|Κινητό|FAX|Email|URL|Ιδιότητα|Μήνυμα|Συστάσεις" "C:\Panos\raw2.txt" > C:\Panos\ready2.txt

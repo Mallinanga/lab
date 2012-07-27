@@ -1,0 +1,29 @@
+---
+author: Panos G. Pgn
+title: books
+tags: misc
+date: 07/08/2010
+
+* Siddhartha By Hermann Hesse
+* 1984 By George Orwell
+* To Kill A Mockingbird By Harper Lee
+* A Clockwork Orange By Anthony Burgess
+* For Whom The Bell Tolls By Ernest Hemingway
+* War And Peace By Leo Tolstoy
+* The Rights Of Man By Tom Paine
+* The Social Contract By Jean-Jacques Rousseau
+* One Hundred Years Of Solitude By Gabriel García Márquez
+* The Origin Of Species By Charles Darwin
+* The Wisdom Of The Desert By Thomas Merton
+* The Tipping Point By Malcolm Gladwell
+* The Wind In The Willows By Kenneth Graham
+* David Copperfield By Charles Dickens
+* Catch-22 By Joseph Heller
+* The Great Gatsby By F. Scott Fitzgerald
+* The Catcher In The Rye By J.D. Salinger
+* Crime And Punishment By Fyodor Dostoyevsky
+* Lolita By Vladimir Nabokov
+* Getting Things Done By David Allen
+* How To Win Friends And Influence People By Dale Carnegie
+* The Grapes Of Wrath By John Steinbeck
+* The Master And Margarita By Mikhail Bulgak

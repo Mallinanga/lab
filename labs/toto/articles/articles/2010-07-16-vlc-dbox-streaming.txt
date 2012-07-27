@@ -1,0 +1,17 @@
+---
+title: vlc dbox streaming
+date: 16/07/2010
+tags: encoding test test2 test3
+
+&nbsp;
+    @ECHO OFF
+    "%ProgramFiles%\VideoLan\VLC\vlc.exe" -vvv %1 :sout=#transcode{vcodec=mp2v,vb=3072,scale=1,acodec=mp2a,ab=192,fps=25,channels=2}:duplicate{dst=std{access=file,mux=ts,dst="Z:\%~n1.ts"}}
+    REM "%ProgramFiles%\VideoLan\VLC\vlc.exe" -vvv %1 :sout=#transcode{vcodec=mp2v,vb=3072,scale=1,acodec=mp2a,ab=192,width=704,height=576,fps=25,channels=2}:duplicate{dst=std{access=file,mux=ts,dst="D:\%~n1.ts"}}
+    REM "%ProgramFiles%\VideoLan\VLC\vlc.exe" -vvv %1 :sout=#transcode{vcodec=mp2v,vb=3072,scale=1,acodec=mp2a,ab=192,width=720,height=576,fps=25,channels=2}:duplicate{dst=std{access=file,mux=ts,dst="D:\%~n1.ts"}}
+    REM "%ProgramFiles%\VideoLan\VLC\vlc.exe" -vvv %1 :sout=#transcode{vcodec=mp2v,vb=2048,scale=0.5,acodec=mp2a,ab=192,width=720,height=576,fps=25,channels=2}:duplicate{dst=std{access=file,mux=ts,dst="D:\%~n1.ts"}}
+    REM "%ProgramFiles%\VideoLan\VLC\vlc.exe" -vvv %1 :sout=#transcode{vcodec=mp2v,vb=1024,scale=0.5,acodec=mp2a,ab=192,width=720,height=576,fps=25,channels=2}:duplicate{dst=std{access=file,mux=ts,dst="D:\%~n1.ts"}}
+    REM http://192.168.1.200:31344
+
+    #EXTM3U
+    #EXTVLCOPT:sout=#transcode{vcodec=mp2v,vb=3072,width=704,height=576,fps=25,acodec=mpga,ab=192,channels=2}:std{access=http,mux=ts,dst=:9090/dboxstream}
+    D:\superbad.avi

@@ -1,0 +1,12 @@
+---
+title: disable itunes backups
+tags: iphone
+date: 17/07/2010
+
+&nbsp;
+    <key>DeviceBackupsDisabled</key>
+    <data>
+    dHJ1ZQ==
+    </data>
+
+    "%PROGRAMFILES%\itunes\itunes.exe" /setPrefInt DeviceBackupsDisabled 1

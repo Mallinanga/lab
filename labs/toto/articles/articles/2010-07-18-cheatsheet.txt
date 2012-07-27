@@ -1,0 +1,79 @@
+---
+author: Panos G. Pgn
+title: cheatsheet
+tags: win
+date: 18/07/2010
+
+ping -l 1472 -f google.com
+reduce 1472 by 10 until you no longer get the "packet needs to be fragmented" error message, then increase by 1 until you find the max command line number for ping
+
+--
+
+netsh interface ip set address "WiFi" dhcp
+netsh interface ip set dns "WiFi" dhcp
+netsh int ip reset reset.log
+netsh winsock reset catalog
+
+--
+
+bootvis optimisation:
+RUNDLL32 advapi32.dll,ProcessIdleTasks
+
+--
+
+RUNDLL32 printui.dll,PrintUIEntry /?RUNDLL32 printui.dll,PrintUIEntry /?
+
+--
+
+fsutil behavior set mftzone 2
+
+--
+
+eventcreate
+eventtriggers
+typeperf
+
+--
+
+picasa: ctrl+shift+y
+
+--
+
+chrome:
+reopen the last tab you’ve closed ctrl + shift + t
+google chrome remembers the last 10 tabs that you’ve closed
+
+--
+
+quick switch user screen
+press winkey+q and hold it for a second.
+repress q to rotate to other users
+
+--
+
+shadow copy
+/s copy subdirectories
+/j parse junctions
+/i ignore errors
+/y overwrite existing files
+/r overwrite read-only files
+
+--
+
+copy con sample.txt
+This is a text file.
+Another line...
+^Z
+1 file(s) copied.
+copy nul empty.txt
+1 file(s) copied.
+copy /A abc.txt + con
+abc.txt
+con
+BBB
+^Z
+1 file(s) copied.
+
+--
+
+"%programfiles%\microsoft security essentials\mpcmdrun.exe" -signatureupdate

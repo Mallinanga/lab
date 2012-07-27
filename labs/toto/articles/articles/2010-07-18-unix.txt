@@ -1,0 +1,186 @@
+---
+author: Panos G. Pgn
+title: unix
+tags: unix
+date: 18/07/2010
+slug: unix
+
+ssh socks server
+    $ ssh -D 8080 user@remote (set web proxy server to localhost:8080)
+ssh compress exchanging data
+    $ dd if=/dev/cdrom | gzip -c | ssh jdoe@work ‘gunzip > image.iso’
+    $ dd if=/dev/cdrom | ssh -C jdoe@work ‘gunzip > image.iso’
+ssh fingerprint
+    $ ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key.pub
+    $ ssh-keygen -R hostname (remove key from known hosts)
+ssh escape sequences
+    $ ~?
+    $ ~. (kills ssh connection without waiting for it to timeout)
+    $ ~^Z (backgrounds ssh connection)
+ssh run remote command
+    $ ssh hostname uname -a
+    $ ssh hostname -t top (allocate pseudo-tty for terminal applications)
+stopwatch
+    $ time cat
+search wikipedia
+    dig +short txt futurama.wp.dg.cx
+
+&nbsp;
+    chmod g+s
+
+&nbsp;
+    ffmpeg -i 269.avi -f mpegts -acodec libmp3lame -ar 48000 -ab 64k -s 480×320 -vcodec libx264 -b 96k -flags +loop -cmp +chroma -partitions +parti4×4+partp8×8+partb8×8 -subq 5 -trellis 1 -refs 1 -coder 0 -me_range 16 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -bt 200k -maxrate 96k -bufsize 96k -rc_eq 'blurCplx^(1-qComp)' -qcomp 0.6 -qmin 10 -qmax 51 -qdiff 4 -level 30 -aspect 480:320 -g 30 -async 2 269.mp4
+    ffmpeg -i 268.avi -s 480x320 -r 30000/1001 -b 200k -bt 240k -vcodec libx264 -coder 0 -bf 0 -refs 1 -flags2 -wpred-dct8x8 -level 30 -maxrate 10M -bufsize 10M -acodec libfaac -ac 2 -ar 48000 -ab 192k 268.mp4
+
+&nbsp;
+    :w !sudo tee %
+
+&nbsp;
+    ^foo^bar^
+    !!:s/foo/bar
+    !!:gs/foo/bar
+
+&nbsp;
+     cp filename{,.bak}
+     echo {a,b,c}{a,b,c}{a,b,c}
+
+&nbsp;
+     ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -sameq /tmp/out.mpg
+
+&nbsp;
+     !whatever:p
+
+&nbsp;
+     bash: ctrl-r
+
+&nbsp;
+     ssh -f -N -L2001:www.google.com:80 somemachine
+
+&nbsp;
+     (space)curl -u user:pass -d status='Tweeting from the shell' http://twitter.com/statuses/update.xml
+
+&nbsp;
+     dd if=/dev/dsp | ssh username@host dd of=/dev/dsp
+     dd if=/dev/urandom
+
+&nbsp;
+     lsof -n -i -P
+
+&nbsp;
+     sshfs name@server:/path/to/folder /path/to/mount/point
+     fusermount -u /path/to/mount/point
+
+&nbsp;
+     wget --random-wait -l 0 -r -p -e robots=off -U Mozilla www.example.com
+     --wait=1h
+
+key sequence: a newline followed by ~.. It works like a charm
+press ~C and receive an ssh> prompt, where you can press ? for help
+
+&nbsp;
+     mysqldump -u username -p -v olddatabase > olddbdump.sql
+     mysqladmin -u username -p create newdatabase
+     mysql -u username -p newdatabase < olddbdump.sql
+
+&nbsp;
+     curl https://prowl.weks.net/publicapi/add -F apikey=XXX -F application="My Notification" -F event="Testing" -F description="This is a test using curl to send a notification"
+     ./prowl.pl -apikeyfile=/root/.prowl -application=Application -event=Event -notification=Notification -priority=2
+.
+     nmblookup -U xxx.xxx.xxx.xxx -A
+     nmblookup '*'
+.
+     cat /var/spool/mail/user | formail -s sendmail mallinanga@gmail.com
+.
+     ./configure --prefix=/opt/samba --enable-static --disable-shared --disable-swat --disable-cups --disable-iprint --disable-pie --disable-fam --disable-avahi --with-
+     fhs --without-ldap --without-ads --without-quotas --without-sys-quotas --without-utmp --without-acl-support --with-aio-support --without-winbind --with-pthreads
+.
+     pdbedit -Lv | less
+     pdbedit -i tdbsam -e smbpasswd
+     pdbedit -i smbpasswd -e tdbsam
+.
+     ldapsearch -x -b '' -s base '(objectclass=*)' namingContexts
+     ldapadd -x -D 'cn=admin,dc=home,dc=paganis,dc=net' -W -f /etc/ldap/addressbook.ldif
+     ldapsearch -x -b 'dc=example,dc=com' '(objectclass=*)'
+     ldapadd -x -D 'cn=admin,dc=home,dc=paganis,dc=net' -W -f paganis.ldif
+.
+     /etc/init.d/slapd stop
+     slapcat -vl backup.ldif
+     slapadd -vl backup.ldif
+     /etc/init.d/slapd start
+.
+     tcpdump host 192.168.1.20
+     tcpdump -i eth0 port 80 and tcp
+     tcpdump -Ai eth0 port 80 and tcp
+     tcpdump -i eth0 port 80 or port 8080
+     tcpdump dst port 53 and udp and src host 192.168.1.20
+     tcpdump -w dump.txt host 192.168.1.20
+     tcpdump -r dump.txt
+.
+     for i in *.wav; do oggenc -q 6 -o "$i.ogg" "$i"; rm "$i"; done
+     flac -8 -o
+.
+     openssl s_client -connect smtp.gmail.com:465 -showcerts
+     openssl s_client -connect pop.gmail.com:995 -CApath /usr/share/ssl/certs
+     openssl s_client -connect mail.mac.com:993 -showcerts
+.
+     man chmod | col -bx > chmod.txt
+.
+     smartctl -a -d ata /dev/ad | grep Temp | cut -c 88-90
+.
+     vim gi ci"
+     netrw plugin
+.
+     mbmon -utnirc 1
+.
+     hdparm -d1 -k1 /dev/hdX
+.
+find setuid and setgid
+     find / -perm +6000 -type f -exec ls -ld {} \; > setuid.txt &
+     chmod a-s program
+bootsector backup and restore
+     dd if=/dev/hda of=bootsector.img bs=512 count=1
+     dd if=bootsector.img of=/dev/hda
+.
+rsync -avxH --delete --exclude /etc/fstab / root@target:/
+.
+     "net rpc SHUTDOWN -C "some comment here" -f -I x.x.x.x -U user_name%password"
+     "#!/bin/bash
+     wks=(`nmap -sL --dns-servers 10.x.x.x,10.x.x.x 10.x.x.x/22, 10.x.x.x.x/23 grep FQDN|cut -d" " -f2 |grep -v -f serverlist`)
+     for (( i=0; i < "${#wks[@]}"; i++)); do
+     net rpc SHUTDOWN -C "This system was left on after hours and is being shutdown" -f -I "${wks[$i]}" -U user_name%password
+     done"
+.
+     svn checkout http://closure-library.googlecode.com/svn/trunk/ closure-library-read-only
+
+to start dropbox from the command line:
+    dropbox.py start
+    to stop dropbox from python:
+    from Dropbox import *
+    Dropbox().stop()
+.
+     cd /dev && /opt/bin/find . -mount -print0 | /opt/bin/cpio -p -0 -d -m -u /mnt
+.
+     apt-get --reinstall install $(dpkg -S LC_MESSAGES | cut -d: -f1 | tr ', ' '\n' | sort -u)
+     apt-get -u --reinstall --fix-missing install $(dpkg -S LC_MESSAGES | cut -d: -f1 | tr ', ' '\n' | sort -u)
+.
+     cat /proc/bus/usb/devices | grep "I\:"
+.
+     dd if=/dev/zero of=swapfile bs=1k count=512000
+     mkswap swapfile
+.
+     lsof -n -P -r 30 /share/mybook/
+.
+     rename 'y/A-Z/a-z/' *
+.
+     tar --compare -f /mnt/mybook/dumps/debian.tar ./etc | grep -v Mod time | less
+     tar -x -v -f debian.tar ./
+.
+    http://killianfaughnan.com/20081112/renaming-files-as-lowercase-using-perl/
+.
+    build-essential libsigc++-2.0-dev pkg-config comerr-dev libcurl3-openssl-dev libidn11-dev libkadm55 libkrb5-dev libssl-dev zlib1g-dev libncurses5 libncurses5-dev
+    PKG_CONFIG_PATH=/opt/rtorrent/lib/pkgconfig/
+.
+    ssh -i <identityfile> root@fritz.box 'wakeup.sh <hostname>'
+.
+    chmod 755 /etc/init.d/pixelserv
+    update-rc.d pixelserv defaults update-rc.d kernel-params defaults

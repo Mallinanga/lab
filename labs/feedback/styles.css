@@ -1,0 +1,147 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	background:url('img/page_bg.jpg') repeat-x #dddddd;
+	color:#555555;
+	font:13px "Lucida Sans Unicode",Arial,Helvetica,sans-serif;
+}
+
+#feedback{
+	background-color:#9db09f;
+	width:310px;
+	height:330px;
+	position:fixed;
+	bottom:0;
+	right:120px;
+	margin-bottom:-270px;
+	z-index:10000;
+}
+
+#feedback .section{
+	background:url('img/bg.png') repeat-x top left;
+	border:1px solid #808f81;
+	border-bottom:none;
+	padding:10px 25px 25px;
+}
+
+#feedback .color{
+	float:left;
+	height:4px;
+	width:20%;
+	overflow:hidden;
+}
+
+#feedback .color-1{ background-color:#d3b112;}
+#feedback .color-2{ background-color:#12b6d3;}
+#feedback .color-3{ background-color:#8fd317;}
+#feedback .color-4{ background-color:#ca57df;}
+#feedback .color-5{ background-color:#8ecbe7;}
+
+#feedback h6{
+	background:url("img/feedback.png") no-repeat;
+	height:38px;
+	margin:5px 0 12px;
+	text-indent:-99999px;
+	cursor:pointer;
+}
+
+#feedback textarea{
+	background-color:#fff;
+	border:none;
+	color:#666666;
+	font:13px 'Lucida Sans',Arial,sans-serif;
+	height:100px;
+	padding:10px;
+	width:236px;
+	resize:none;
+	outline:none;
+	overflow:auto;
+	
+	-moz-box-shadow:4px 4px 0 #8a9b8c;
+	-webkit-box-shadow:4px 4px 0 #8a9b8c;
+	box-shadow:4px 4px 0 #8a9b8c;
+}
+
+#feedback a.submit{
+	background:url("img/submit.png") no-repeat;
+	border:none;
+	display:block;
+	height:34px;
+	margin:20px auto 0;
+	text-decoration:none;
+	text-indent:-99999px;
+	width:91px;
+}
+
+#feedback a.submit:hover{
+	background-position:left bottom;
+}
+
+#feedback a.submit.working{
+	background-position:top right !important;
+	cursor:default;
+}
+
+#feedback .message{
+	font-family:Corbel,Arial,sans-serif;
+	color:#5a665b;
+	text-shadow:1px 1px 0 #b3c2b5;
+	margin-bottom:20px;
+}
+
+#feedback .arrow{
+	background:url('img/arrows.png') no-repeat;
+	float:right;
+	width:23px;
+	height:18px;
+	position:relative;
+	top:10px;
+}
+
+#feedback .arrow.down{ background-position:left top;}
+#feedback h6:hover .down{ background-position:left bottom;}
+#feedback .arrow.up{ background-position:right top;}
+#feedback h6:hover .up{ background-position:right bottom;}
+
+#feedback .response{
+	font-size:21px;
+	margin-top:70px;
+	text-align:center;
+	text-shadow:2px 2px 0 #889889;
+	color:#FCFCFC;
+	display:block;
+}
+
+/* The following styles are only used for the styling of the demo page */
+
+h1{
+	height:135px;
+	background:url('img/page_heading.png') no-repeat center top;
+	text-indent:-999999px;
+	margin-top:230px;
+}
+
+h2{
+	display:none;
+}
+
+p.tzine{
+	font-size:12px;
+	margin:24px;
+	text-align:center;
+	text-shadow:1px 1px 0 #DDDDDD;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	border-bottom:1px dotted #139ad2;
+	color:#139ad2;
+}
+
+a:hover{
+	border-bottom:1px dashed transparent;
+}

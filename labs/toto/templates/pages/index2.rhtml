@@ -1,0 +1,11 @@
+<% articles.select {|a| a[:category] != 'book' }[0...10].each do |article| %>
+  <div class="post">
+    <h2><a href="<%= article.path %>"><%= article.title %></a></h2>
+		<div class="meta"><%= article.author %> <span class="meta_date">&#183; <%= article.date %></span></div>	
+		<div class="comments_count"><a href="<%= article.url %>#disqus_thread">0</a></div>
+    <%= article.summary %>
+    <a class="more" href="<%= article.path %>">Read more &rarr;</a>
+  </div>
+<% end %>
+
+Looking for older articles? See the <a href="/archive/">Archives</a>

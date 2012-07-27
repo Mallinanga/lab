@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Contact | A HTML5 and CSS3 theme by Jayj.dk</title>
+    
+    <link href="css/960.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+    <!--[if IE]>
+		<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 7]>
+    	<link href="css/ie.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    
+</head>
+
+<body>
+
+<div id="wrapper" class="container_12">
+
+    <header id="header" class="grid_12">
+    	<h1><a href="index.html">A CSS3 Theme</a></h1>
+    </header> <!-- end header -->
+
+<div id="content">
+
+	<nav>
+    	<ul id="menu" class="clearfix"> 
+        	<li><a href="index.html">Home</a></li>
+            <li>
+            	<a href="about.html">About</a>
+                
+                <ul>
+                	<li><a href="about.html">Subpage</a></li>
+                    <li><a href="about.html">Subpage 2</a></li>
+                </ul>
+            </li>
+            <li class="current"><a href="contact.html">Contact</a></li>
+        </ul>
+        
+        <br class="clear" />
+    </nav>
+    
+    <!-- Show a "Please Upgrade" box to both IE7 and IE6 users (Edit to IE 6 if you just want to show it to IE6 users) - Jquery will load the content from js/ie.html in the div -->
+    
+    <!--[if lte IE 7]>
+    	<div class="ie grid_7"></div>
+     <![endif]-->
+
+    <section id="main" class="grid_8 alpha">
+    
+        <article class="post">
+        
+            <h2>Kontakt</h2>
+            
+            <form action="sendmail.php" method="post" id="contactform">
+            
+            <p>
+                <input type="text" name="name" id="name" class="grid_3" value="" />
+                <label for="name">Your Name</label>
+            </p>
+            
+            <p>
+                <input type="text" name="email" id="email" class="grid_3" value="" />
+                <label for="email">Your Email</label>
+            </p>
+            
+            <p>
+                <input type="text" name="subject" id="subject" class="grid_3" value="" />
+                <label for="subject">Subject</label>
+            </p>
+            
+            <p>
+                <textarea name="message" id="message" class="grid_6" cols="50" rows="10"></textarea>
+            </p>
+            
+            <p>
+                <input type="submit" name="submit" class="grid_2" value="Send Email" />
+            </p>
+            
+            <p class="hide grid_7" id="response"></p>
+    
+            <div class="hide">
+                <label for="spamCheck">Do not fill out this field</label>
+                <input name="spam_check" type="text" value="" />
+            </div>
+            
+            </form>
+            
+            <div class="clear"></div>
+        
+        </article>
+    
+    </section> <!-- end main -->
+
+<aside id="sidebar" class="grid_4 omega">
+
+    <div class="widget">
+    
+        <h3>Sidebar heading</h3>
+        
+        <ul>
+            <li><a href="#">Li element</a></li>
+            <li><a href="#">Li element</a></li>
+            <li><a href="#">Li element</a></li>
+            <li><a href="#">Li element</a></li>
+            <li><a href="#">Li element</a></li>
+        </ul>
+        
+    </div> <!-- end widget -->
+
+    <div class="widget">
+    
+    	<h3>Widget</h3>
+    
+        <p>
+            Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.
+            One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. 
+        </p>
+        
+    </div> <!-- end widget -->
+
+</aside> <!-- end sidebar -->
+
+</div> <!-- end content -->
+
+<footer id="footer" class="grid_12">
+	<p>Copyright &copy; 2009 <a href="#">Sitename.com</a> - Design by <a href="http://jayj.dk" title="Design by Jayj.dk">Jayj.dk</a></p>
+</footer> <!-- end footer -->
+
+<div class="clear"></div>
+
+</div> <!-- end wrapper -->
+</body>
+</html>

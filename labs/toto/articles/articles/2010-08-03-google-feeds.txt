@@ -1,0 +1,10 @@
+---
+author: Panos G. Pgn
+title: google feeds
+tags: ""
+date: 03/08/2010
+
+* [google reader](http://www.google.com/reader/atom/user/16351807414423792997/state/com.google/reading-list "google reader")
+* [gmail](http://mail.google.com/mail/feed/atom/unread/ "gmail")
+* [gmail](http://mail.google.com/mail/feed/atom/labelname/ "gmail")
+* [google apps mail](https://mail.google.com/a/mallinanga.de/feed/atom/unread "google apps mail")

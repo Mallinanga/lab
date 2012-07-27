@@ -1,0 +1,13 @@
+<h1><%= @path %></h1>
+<% [2010, 2009, 2008, 1900].each do |year| %>
+<div class="archive_set">
+	<div class="archive_year"><h1><%= year %></h1></div>
+	<div class="archives_for_year">
+		<% @articles.select {|a| a[:date].year == year }.each do |article| %>
+		<div class="archive_article">
+			<a href="<%= article.path %>"><%= article.title %></a>
+		</div>
+		<% end %>
+	</div>
+</div>
+<% end %>

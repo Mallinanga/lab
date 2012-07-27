@@ -1,0 +1,9 @@
+---
+title: current link
+date: 16/07/2010
+tags: loulakis
+
+Things to remember:
+    $activeAppend = ($page['file'] == $currentFile) ? ' id="active"' : "";
+    $currentAppend = ($page['file'] == $currentFile) ? ' id="current' : "";
+    $menuOutput .= '<li' . $activeAppend . '>' . '<a href="' . $page['file'] . '"' . $currentAppend . '">' . $page['title'] .'</a>' . '</li>';

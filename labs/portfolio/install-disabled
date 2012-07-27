@@ -1,0 +1,145 @@
+<?php
+include("config.php");
+
+$info_query = mysql_query("SELECT * FROM ".$prefix."ProFolio_info ORDER BY id DESC LIMIT 0,1");
+
+if(mysql_num_rows($info_query) > 0){
+	$red = "Location: index.php";
+	header($red);
+	die("Redirecting to ProFolio Index Page...");
+}
+
+$reply = '';
+
+if(isset($_POST['submit'])){
+	$username = trim(strtolower($_POST['username']));
+	$password = trim(strtolower($_POST['password']));
+	$confirm = trim(strtolower($_POST['confirm']));
+	if($username != '' && $password != '' && $confirm != ''){
+		if($password == $confirm){
+			//Create Files
+			if(!file_exists('Files')){
+				mkdir('Files', 0777);
+			}
+			if(!file_exists('Files_Icons')){
+				mkdir('Files_Icons', 0777);
+			}
+			if(!file_exists('Files_Previews')){
+				mkdir('Files_Previews', 0777);
+			}
+			chmod("Files", 0777);
+			chmod("Files_Icons", 0777);
+			chmod("Files_Previews", 0777);
+			
+			//Create Tables
+			mysql_query("CREATE TABLE `".$prefix."ProFolio_work` (
+						  `id` int(8) NOT NULL auto_increment,
+						  `date` varchar(14) NOT NULL default '',
+						  `title` varchar(255) NOT NULL default '',
+						  `type` varchar(100) NOT NULL default '',
+						  `file` varchar(255) NOT NULL default '',
+						  `preview` varchar(255) NOT NULL default '',
+						  `icon` varchar(255) NOT NULL default '',
+						  PRIMARY KEY  (`id`),
+						  FULLTEXT KEY `title` (`title`,`type`)
+						) TYPE=MyISAM AUTO_INCREMENT=1 ") or die(mysql_error());
+			
+			mysql_query("CREATE TABLE `".$prefix."ProFolio_info` (
+						  `id` int(5) NOT NULL auto_increment,
+						  `username` varchar(30) NOT NULL default '',
+						  `password` varchar(30) NOT NULL default '',
+						  `page_about` blob NOT NULL,
+						  `page_contact` blob NOT NULL,
+						  `firstname` varchar(50) NOT NULL default '',
+						  `lastname` varchar(50) NOT NULL default '',
+						  `email` varchar(255) NOT NULL default '',
+						  `phone` varchar(50) NOT NULL default '',
+						  PRIMARY KEY  (`id`)
+						) TYPE=MyISAM AUTO_INCREMENT=1") or die(mysql_error());
+						
+			mysql_query("CREATE TABLE `".$prefix."ProFolio_customize` (
+						  `id` mediumint(4) NOT NULL auto_increment,
+						  `categories` text NOT NULL,
+						  `color_firstname` varchar(7) NOT NULL,
+						  `color_lastname` varchar(7) NOT NULL,
+						  `color_links` varchar(7) NOT NULL,
+						  `color_text` varchar(7) NOT NULL,
+						  `color_lightbox` varchar(7) NOT NULL,
+						  `color_background` varchar(7) NOT NULL,
+						  `opt_backgroundimg` varchar(255) NOT NULL default '',
+						  `opt_backgroundpos` varchar(50) NOT NULL default '',
+						  `opt_backgroundrep` varchar(20) NOT NULL default '',
+						  PRIMARY KEY  (`id`)
+						) ENGINE=MyISAM AUTO_INCREMENT=1 ;") or die(mysql_error());
+			
+			//Insert Data in DBs
+			mysql_query("INSERT INTO ".$prefix."ProFolio_info (username, password, firstname, lastname) VALUES ('$username', '$password', 'First', 'Lastname')") or die(mysql_error());
+			mysql_query("INSERT INTO ".$prefix."ProFolio_customize (categories, color_firstname, color_lastname, color_links, color_text, color_lightbox, color_background, opt_backgroundimg, opt_backgroundpos, opt_backgroundrep) VALUES('Artwork, Identity, Illustration, Photography, Web Designs', '#555', '#fff', '#e1e1e1', '#ebebeb', '#000', '#000', 'Backgrounds/clouds.png', 'bottom right', 'no-repeat')") or die(mysql_error());
+			
+			if(file_exists('upgrade.php')){
+				unlink('upgrade.php');
+			}
+			
+			//Finish and Redirect
+			$red = "Location: index.php";
+			header($red);
+			die("Redirecting to ProFolio Index Page...");
+		} else {
+			$reply = "Your password and password confirmation did not match.";
+		}
+	} else {
+		$reply = "Please fill out a username, password and password confirmation.";
+	}
+}
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Installing Your ProFolio</title>
+<style type="text/css">
+* {padding:0px; margin:0px; font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#0A1528; text-align:left;}
+.container {width:500px; border:12px solid #BECAFF; margin:100px auto 30px; display:block; padding:20px;}
+h1 {font-size:20px; margin-bottom:10px;}
+.main {line-height:20px; margin:15px 0px;}
+.form {padding:20px 0px 20px 40px; margin:auto;}
+.form p {margin: 8px 0px 2px; font-weight:bold;}
+.form input.field {border:1px inset #555; padding:4px; font-family:Arial, Helvetica, sans-serif; width:250px;}
+
+.footer {position:fixed; bottom:0px; right:0px; width:100%; background:url(Images/transparent80.png) repeat;}
+.footer p {text-align:right; padding:3px 6px; font-size:12px;}
+.footer a {color:#fff; text-decoration:none;}
+</style>
+</head>
+<body>
+	<div class="container">
+    	<? if($reply != ''){ ?>
+        <p style="color:#CC0000; font-weight:bold;"><? echo $reply; ?></p>
+        <? } ?>
+    	<h1>Installing ProFolio...</h1>
+        <div class="main">
+			Congratulations, you are seconds away from having your own professional digital portfolio! Thank you for choosing ProFolio to help you build your own elegant, easy-to-manage, and secure portfolio. ProFolio was started by Zach Krasner to help artists of all types display their works in a beautifully crafted webpage that is easily customized and manageable. 
+        </div>
+        <div class="main">
+        	<strong>To get started with your ProFolio</strong>, you need to create an administrator username and password. You will need your username and password in order to login to your ProFolio to add pieces, manage your works, and edit your settings. Don't forget your username and password, or you won't be able to access these options of your ProFolio! Enter your desired username and password below... (<strong>Don't use</strong> apostrophes or quotation marks!)
+        </div>
+        <div class="main">
+        	<p>Once you click <strong>Finish</strong> below, your ProFolio will be created! You will be transferred to your ProFolio where you can login on the top-right of the page. Once logged in, you will full control over your portfolio and can start adding pieces to it immediately. Thanks for using ProFolio!</p>
+		</div>
+        <div class="form">
+        	<form action="" method="post" enctype="multipart/form-data">
+            	<p><strong>Your Username</strong></p>
+            	<input class="field" name="username" type="text" maxlength="30" />
+                <p><strong>Your Password</strong></p>
+            	<input class="field" name="password" type="password" maxlength="30" />
+                <p><strong>Confirm Your Password</strong></p>
+            	<input class="field" name="confirm" type="password" maxlength="30" />
+                <p>&nbsp;</p>
+                <input name="submit" value="&nbsp;&nbsp;Finish&nbsp;&nbsp;" type="submit"  />
+            </form>
+        </div>
+    </div>
+</body>
+<div class="footer"><p><a href="http://sticktacular.com/" target="_blank">Powered By ProFolio</a></p></div>
+</html>
